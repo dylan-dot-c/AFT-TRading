@@ -1,0 +1,343 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background: #123;
+    color: white;
+}
+
+a:visited {
+    color: unset;
+    text-decoration: none;
+}
+* {
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+i {
+    font-size: 30px;
+    padding: 0 10px;
+    transition: .3s;
+}
+
+.gradient {
+    margin-top: 10rem;}
+
+nav {
+    background: rgb(0, 210, 151);
+    z-index: 100;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    font-size: 20px;
+    
+}
+
+button {
+    cursor: pointer;
+}
+
+nav button {
+    padding: .5rem 1rem;
+    font-size: 16px;
+    border: 3px solid #123;
+    background: transparent;
+    border-radius: 25px;
+}
+
+button i {
+    font-size: inherit;
+    
+}
+
+.home button {
+    padding: .5rem 1rem;
+    font-size: 16px;
+    color: rgba(0, 210, 151, 0.791);
+    border: 3px solid rgba(0, 210, 151, 0.791);
+    background: transparent;
+    border-radius: 25px;
+    transition: .3s;
+}
+
+.home button:hover {
+    border-color: white;
+    color: white;
+}
+
+.home button:hover i{
+    transform: translateX(10px);
+}
+
+
+ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    /* background-color: black; */
+    margin: 0;
+    position: relative;
+    transform-origin: center;
+}
+
+ul li::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 0;
+    background-color: #123;
+    transition: .4s;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    z-index: -1;
+
+    /* transform: rotate(180deg); */
+}
+
+ul li:hover::after {
+    height: 100%;
+    transform: translateY(-100%);
+}
+ 
+nav img {
+    width: 40px;
+    font-size: 1.5rem;
+}
+
+.products--des {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    /* font-size: 20px; */
+}
+.para1 {
+    font-size: 20px;
+    width: 30%;
+}
+
+.home {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    background-image: url(/images/devices.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home div {
+    max-width: 600px;
+    text-align: center;
+    /* font-size: 40px; */
+}
+
+.container {
+    max-width: 1240px;
+    margin: auto;
+    padding: 1rem;
+}
+
+/* section {
+    background-color: aquamarine;
+}
+h2 {
+    background-color: aliceblue;
+} */
+
+
+.services {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service {
+    width: 300px;
+    text-align: center;
+    padding: 1rem;
+transition: .3s;
+}
+
+.service:hover {
+    box-shadow: 0 0 10px rgba(0, 210, 151, 0.791);
+    /* transform: scale(1.03); */
+}
+
+.service:hover span i {
+    transform: scale(1.5);
+}
+
+span i {
+    color: rgba(0, 210, 151, 0.791);
+    transition: .4s;
+}
+h2,h3 {
+    text-align: center;
+}
+
+.products {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+footer {
+    background:rgba(0, 210, 151, 0.791);
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* align-items: center; */
+}
+
+.hea{
+    text-align: left;
+}
+
+.contact-group h2 {
+    margin: 0;
+}
+
+            form {
+                padding: 1rem;
+                border-radius: 1rem;
+                background: rgba(0, 210, 151, 0.791);
+                color: white;
+                width: 50%;
+                
+            }
+
+            .form-container{
+                padding: 1rem;
+            }
+
+            section.content {
+                max-width: 40%;
+            }
+           .contact-us {
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 3rem 2rem;
+            width: 100%;
+            align-items: center;
+           }
+
+           h1 {
+            font-size: 3rem;
+           }
+
+           .contact-us p {
+            color: white;
+           }
+
+           .contact-group {
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+           }
+
+           .contact-group i {
+            font-size: 2rem;
+            padding-right: 20px;
+           }
+
+            #message{
+                flex: 2;
+            }
+            .field {
+                margin-bottom: 10px;
+                }
+
+            .field label {
+                display: block;
+                font-size: 1.2rem;;
+                color: rgb(255, 255, 255);
+                font-weight: 500;
+                }
+
+            .field label::after{
+                content: "*";
+                color: red;
+                font-weight: 400;
+                margin-left: 5px;
+            }
+
+            .field input {
+                /* display: block; */
+                border:none;
+                /* border-bottom: 2px solid purple; */
+                outline: none;
+                color: rgb(10, 10, 10);
+                width: 100%;
+                line-height: 1.5;
+                font-size: 1rem;
+                background: white;
+                border-radius: 5px;
+                background-clip: text;
+                padding: 10px;
+                }
+
+                textarea{
+                    background: rgb(255, 255, 255);
+                    /* color: white; */
+                    padding: 10px;
+                    line-height: 1.5;
+                    font-size: 1rem;
+                    outline: none;
+                    width: 100%;
+                    height: 120px;
+                    resize: none;
+                }
+
+            input[type="submit"] {
+                display: block;
+                padding: 6px 30px;
+                font-size: 14px;
+                background-color: #1bd72a;
+                color: #fff;
+                border: none
+                }
+
+                #button{
+                    padding: 10px;
+                    border-radius: 4px;
+                    background-color: rgb(43, 223, 43);
+                    color: white;
+                    width: 100%;
+                    text-align: center;
+                    border: none;
+                    transition: .3s;
+                    font-size: large;
+                    /* margin: 0 auto; */
+
+                }
+
+                #button:hover {
+                    background-color: rgb(30, 162, 30);
+                }
+
+
+#about{
+    width: 100%;
+    background-image:
+    linear-gradient(135deg, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)),
+    url('images/aboutus.webp');
+    height: 80vh;
+    display: grid;
+    place-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
