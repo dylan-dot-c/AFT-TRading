@@ -5,6 +5,11 @@ body, html {
     color: white;
 }
 
+a {
+    text-decoration: none;
+    color: unset;
+}
+
 a:visited {
     color: unset;
     text-decoration: none;
@@ -25,7 +30,7 @@ i {
 nav {
     background: rgb(0, 210, 151);
     z-index: 100;
-    padding: 1rem;
+    padding: 1rem 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,22 +62,45 @@ button i {
 .home button {
     padding: .5rem 1rem;
     font-size: 16px;
-    color: rgba(0, 210, 151, 0.791);
-    border: 3px solid rgba(0, 210, 151, 0.791);
+    color: white;
+    border: 3px solid white;
     background: transparent;
     border-radius: 25px;
     transition: .3s;
 }
 
 .home button:hover {
-    border-color: white;
-    color: white;
+    border-color: rgb(0, 162, 255);
+    color: rgb(0, 162, 255);
 }
 
 .home button:hover i{
     transform: translateX(10px);
 }
 
+.dpcontent ul li {
+    display: block;
+    margin-left: -40px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dpcontent {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: -10px;
+    background: rgb(0, 210, 151);
+    z-index: 10000;
+}
+
+.dropdown:hover .dpcontent {
+    display: block;
+
+    /* transform: translateY(100px); */
+}
 
 ul li {
     list-style-type: none;
@@ -136,7 +164,7 @@ nav img {
 .home div {
     max-width: 600px;
     text-align: center;
-    /* font-size: 40px; */
+    /* font-size: 20px; */
 }
 
 .container {
@@ -184,7 +212,7 @@ h2,h3 {
     text-align: center;
 }
 
-.products {
+.productIcons {
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -236,7 +264,7 @@ footer {
            }
 
            h1 {
-            font-size: 3rem;
+            /* font-size: 3rem; */
            }
 
            .contact-us p {
@@ -340,4 +368,60 @@ footer {
     place-items: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.products {
+    width: 100%;
+    background-image:
+    linear-gradient(135deg, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)),
+    url('images/gadgetspic.jpeg');
+    height: 80vh;
+    display: grid;
+    place-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* PRODUCTS PAGE STYLES */
+
+.offersContainer {
+    DISPLAY: FLEX;
+    flex-wrap : wrap;
+    justify-content: space-around;
+    position: relative;
+}
+
+.offersContainer img {
+    border-radius: 20px;
+}
+
+.fa-angle-down {
+    font-size: 1rem;
+}
+.offersContainer h3 {
+    color:#30ff41;
+    text-transform: uppercase;
+    background:rgb(0, 162, 255);
+    box-shadow: 0 0 10px black inset;
+    cursor: pointer;
+    padding: 10px;
+}
+.product--offers {
+    display: none;
+    top: 68px;
+    position: absolute;
+    background:rgb(0, 162, 255);
+    z-index: 100;
+}
+
+.offers:hover .product--offers {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.offers h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;;
 }
