@@ -3,7 +3,7 @@ footer.innerHTML = `
 <div class="container">
 <h3>CopyRight &copy; APF Trading Services</h3>
 <p>Follow Us On</p>
-<div class="links">
+<div class="flinks">
     <i class="fa-brands fa-instagram"></i>
     <i class="fa-brands fa-facebook"></i>
     <i class="fa-brands fa-twitter"></i>
