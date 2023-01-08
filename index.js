@@ -1,7 +1,7 @@
 function scrollFunction() {
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     // document.querySelector("nav").style.top = "0";
-    document.querySelector("nav").style.backgroundColor = "var(--green)";
+    document.querySelector("nav").style.backgroundColor = "var(--secondary)";
   } else {
     // document.querySelector("nav").style.top = "-60px";
     document.querySelector("nav").style.backgroundColor = "transparent";

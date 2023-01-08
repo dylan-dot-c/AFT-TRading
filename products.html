@@ -10,6 +10,88 @@
     <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <style>
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+        .item {
+            width: 300px;
+            position: relative;
+            transition: .5s;
+            padding: 10px;
+        }
+
+        .item img {
+            width: 100%;
+
+        }
+
+        .item .stars {
+            color: yellow;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            /* font-size: 10px; */
+            background: rgba(0,0,0,0.5);
+        }
+
+        .stars i {
+            font-size: 16px;
+            padding-left: 3px;
+        }
+
+        .flexed {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .tabs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+        .details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item:hover {
+            background: rgb(0, 199, 166);
+        }
+
+        button {
+            padding: .5rem 1rem;
+            background-color: white;
+            color: black;
+            outline: none;
+            border: none;
+            width: 200px;
+        }
+
+        .active {
+            background: rgb(0, 199, 166);
+            color: white;
+            /* transform: scale(1.2); */
+        }
+
+        @media (min-width: 550px) {
+            .tabs {
+                flex-direction: row;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav id="nav">
@@ -23,38 +105,43 @@
             <h2>ALL OF OUR PRODUCTS</h2>
             <p align="center">We offer a wide range of products starting from Simple button phones to extra large touch screen smart TVs!</p>
         </div>
-        <section class="container">
-            <div class="offersContainer">
-                <div class="offers">
-                    <h3>PRODUCTS</h3>
-                    <div class="product--offers">
-                    <div class="offer">
-                        <h4>Mobile Phones</h4>
-                        <img src="/images/phones.jpg" alt="" width="100px">
-                    </div>
-                    <div class="offer">
-                        <h4>Tablets</h4>
-                        <img src="/images/tablets.jpg" alt="" width="100px">
-                    </div>
-                    </div>
+        <div class="tabs container">
+            <button onclick="showShowcase(0)" class="active">Phones&Tablets</button>
+            <button onclick="showShowcase(1)">Smart Tvs&Laptops</button>
+            <button onclick="showShowcase(2)">Microwaves</button>
+        </div>
+        <section class="container flexed" id="showcase">
+            <div class="item">
+                <img src="https://d316acfc88wber.cloudfront.net/global/phones/spark9t/KH6----spark__9t__lan--800x800.png" alt="">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
-                <div class="offers">
-                    <h3>DESKTOPS</h3>
-                    <div class="product--offers">
-                        <div class="offer">
-                            <h4>Smart TVs</h4>
-                            <img src="/images/smart tvs.jpg" alt="" width="100px">
-                        </div>
-                    </div>
+                <div class="details">
+                    <p>iPhoneX</p>
+                    <span>US$500</span>
                 </div>
-                <div class="offers">
-                    <h3>Microwaves</h3>
-                    <div class="product--offers">
-                    <div class="offer">
-                        <h4>Home Entertainemnet Systems</h4>
-                        <img src="/images/entertainment.jpg" alt="" width="100px">
-                    </div>
-                    </div>
+            </div>
+            
+    
+            <div class="item">
+                <img src="https://d316acfc88wber.cloudfront.net/global/phones/camon17p/green.png" alt="">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="details">
+                    <p>CAMON 200</p>
+                    <span>US$278</span>
+                </div>
+            </div>
+            
+            <div class="item">
+                <img src="https://www.freeiconspng.com/uploads/windows-8-tablet-png-16.png" alt="">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="details">
+                    <p>Windows Tab 8</p>
+                    <span>US$300</span>
                 </div>
             </div>
         </section>
@@ -63,6 +150,130 @@
         <script src="footer.js"></script>
     </footer>
     <script src="index.js"></script>
+
+    <script>
+        const showcase = document.getElementById('showcase')
+
+        const second = ` <div class="item">
+                <img src="https://b2c-contenthub.com/wp-content/uploads/2022/06/lg-g2.jpg?quality=50&strip=all" alt="">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="details">
+                    <p>LG LED tv</p>
+                    <span>US$550</span>
+                </div>
+            </div>
+            
+    
+            <div class="item">
+                <img src="https://specials-images.forbesimg.com/imageserve/62598a2b63c6107b33847156/Samsung-S95B-/960x0.jpg?fit=scale" alt="">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="details">
+                    <p>Samsung-S95B tv</p>
+                    <span>US$600</span>
+                </div>
+            </div>
+            
+            <div class="item">
+                <img src="https://m.media-amazon.com/images/I/61k95btGTyS._AC_SL1500_.jpg" alt="">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="details">
+                    <p>Dell  32GB RAM</p>
+                    <span>US$250</span>
+                </div>
+            </div>`
+
+        const first= ` <div class="item">
+                <img src="https://d316acfc88wber.cloudfront.net/global/phones/spark9t/KH6----spark__9t__lan--800x800.png" alt="">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="details">
+                    <p>iPhoneX</p>
+                    <span>US$500</span>
+                </div>
+            </div>
+            
+    
+            <div class="item">
+                <img src="https://d316acfc88wber.cloudfront.net/global/phones/camon17p/green.png" alt="">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="details">
+                    <p>CAMON 200</p>
+                    <span>US$278</span>
+                </div>
+            </div>
+            
+            <div class="item">
+                <img src="https://www.freeiconspng.com/uploads/windows-8-tablet-png-16.png" alt="">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="details">
+                    <p>Windows Tab A8</p>
+                    <span>US$300</span>
+                </div>
+            </div>`
+
+        const third = `<div class="item">
+                <img src="https://images-prod.healthline.com/hlcmsresource/images/AN_images/broccoli-in-microwave-1296x728.jpg" alt="">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="details">
+                    <p>Cool microwave</p>
+                    <span>US$150</span>
+                </div>
+            </div>
+            
+    
+            <div class="item">
+                <img src="https://www.bassheadspeakers.com/wp-content/uploads/2020/01/Best-Home-Theater-System.jpg" alt="">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="details">
+                    <p>Bass Speaker System</p>
+                    <span>US$850</span>
+                </div>
+            </div>
+            
+            <div class="item">
+                <img src="https://images.crutchfieldonline.com/ImageBank/v20180131145100/core/learn/article/1139/4k-home-theater-Polk_signature-mobile.jpg" alt="">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <div class="details">
+                    <p>4k theater</p>
+                    <span>US$470</span>
+                </div>
+            </div>`
+
+        const info = [first, second, third]
+        const showShowcase = function(index) {
+            showcase.innerHTML = info[index]
+        }
+
+       const buttons = document.querySelectorAll('button')
+       buttons.forEach( (button) => {
+        button.addEventListener('click', function(e) {
+        
+        for(let i of buttons) {
+            if(i.classList.contains('active')) {
+                i.classList.remove('active')
+            }
+        }
+        e.target.className='active'
+       })
+       })
+    </script>
 
     </body>
     </html>
