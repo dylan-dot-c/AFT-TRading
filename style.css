@@ -1,12 +1,11 @@
 :root {
-     --main: rgb(0, 5, 107);
-    --secondary: rgb(0, 199, 166);
-    --main-text: #FFF;
+    --main: rgb(0, 5, 107);
+    --secondary: rgb(4, 121, 199);
+    --main-text: rgb(255, 255, 255);
     --second-text: #FFF;
     --red: red;
     --black: rgb(10, 10, 10);
     --trans-black: rgba(0, 0, 0, 0.52);
-    --bg-image:  url(/images/bgimage.png);
     --head-text: rgb(238, 238, 238);
 }
 
@@ -592,6 +591,12 @@ border: none
         font-size: 1rem;
         padding: 2rem;
     }
+
+    .products, #about{
+        height: 60vh;
+    }
+
+    
 
     .products--des {
         flex-direction: column-reverse;

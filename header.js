@@ -10,7 +10,7 @@ header.innerHTML =
     <div class="links">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products <i class="fa-solid fa-angle-down"></i></a>  </li>
+            <li><a href="products.html">Products </a>  </li>
             <li><a href="aboutus.html">About</a> </li>
             <li><a href="contachus.html">Contact</a></li
         </ul>
