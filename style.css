@@ -25,7 +25,6 @@
 
 
 
-
 body, html {
     margin: 0;
     padding: 0;
@@ -89,6 +88,14 @@ nav button {
     border: 3px solid var(--second-text);
     background: transparent;
     border-radius: 25px;
+}
+
+
+nav img {
+    padding: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    box-sizing: content-box;
+    border-radius: 10px;
 }
 
 button i {
@@ -408,7 +415,7 @@ line-height: 1.5;
 font-size: 1rem;
 background: var(--main-text);
 border-radius: 5px;
-background-clip: text;
+/* background-clip: text; */
 padding: 10px;
 }
 
